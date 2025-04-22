@@ -17,4 +17,11 @@ app.listen(port,() => {
     console.log(`Example app listening on port ${port}`)
 });
 
+// importo file con rotte della cartella router
+const postsRouter = require(`./routers/rottePosts.js`);
+
+// inserisco istruzione per utilizzare il file esportato per le rotte
+app.use(`/posts`, postsRouter);
+
+// definizione asset statici
 app.use(express.static(`puclic`));
