@@ -9,10 +9,12 @@ const port = 3000;
 
 // definisco la prima rotta
 app.get(`/`, (req,res) => {
-    res.send(`hello world questo è più complesso`)
+    res.send(`hello world`)
 });
 
 // avvio il server mettendolo in ascolto della porta definita
 app.listen(port,() => {
     console.log(`Example app listening on port ${port}`)
 });
+
+app.use(express.static(`puclic`));
