@@ -1,34 +1,30 @@
 // recuperiamo i posts
-const dataPosts = require(`../data/posts.js`)
+const posts = require(`../data/posts.js`)
 
 // LOGICA ROTTE
 // definizione funzione index
 
-function index (res,req){
+function index (req,res){
     res.json(posts);
 }
 
-function show (res,req){
+function show (req,res){
     res.send('Dettagli dei posts ' + req.params.id);
-
 }
 
-function store (res,req){
+function store (req,res){
     res.send('Creazione nuovi posts');
-
 }
 
-function update (res,req){
+function update (req,res){
     res.send('Modifica integrale dei posts ' + req.params.id);
-
 }
 
-function modify (res,req){
+function modify (req,res){
     res.send('Modifica parziale dei posts ' + req.params.id);
-
 }
 
-function destroy (res,req){
+function destroy (req,res){
     res.send('Eliminazione dei posts ma sei sicuro? ' + req.params.id);
 }
 

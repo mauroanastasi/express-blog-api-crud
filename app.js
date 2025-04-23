@@ -12,11 +12,6 @@ app.get(`/`, (req,res) => {
     res.send(`hello world`)
 });
 
-// avvio il server mettendolo in ascolto della porta definita
-app.listen(port,() => {
-    console.log(`Example app listening on port ${port}`)
-});
-
 // importo file con rotte della cartella router
 const postsRouter = require(`./routers/rottePosts.js`);
 
@@ -24,4 +19,9 @@ const postsRouter = require(`./routers/rottePosts.js`);
 app.use(`/posts`, postsRouter);
 
 // definizione asset statici
-app.use(express.static(`puclic`));
+app.use(express.static(`public`));
+
+// avvio il server mettendolo in ascolto della porta definita
+app.listen(port,() => {
+    console.log(`Example app listening on port ${port}`)
+});
