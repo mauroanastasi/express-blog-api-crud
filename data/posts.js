@@ -43,3 +43,6 @@ const posts = [
     tags: ["Dolci", "Dolci al cioccolato", "Torte", "Ricette vegetariane", "Ricette al forno"],
   },
 ];
+
+// esporto il file contenente l array di oggetti
+module.exports = posts

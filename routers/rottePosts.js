@@ -6,7 +6,7 @@ const router = express.Router();
 
 // index    
 router.get('/', function (req, res) {
-    res.send(`Elenco dei post`);
+    res.json(posts);
 });
     
 // show
@@ -36,3 +36,7 @@ router.delete('/:id', function (req, res) {
 
 // esporto il router
 module.exports = router;
+
+// importo file array oggetti
+// const posts = require(`../data/posts.js`);
+
