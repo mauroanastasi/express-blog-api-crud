@@ -4,6 +4,9 @@ const express = require(`express`);
 // importo la classe router
 const router = express.Router();
 
+// importiamo il file controller
+const postsController = require(`../controllers/postsController.js`)
+
 // index    
 router.get('/', function (req, res) {
     res.json(posts);
