@@ -20,7 +20,11 @@ function index (req,res){
 }
 
 function show (req,res){
-    res.send('Dettagli dei posts ' + req.params.id);
+    
+    const id = parseInt(req.params.id)
+    console.log(id)                   
+    const post = posts.find (post => post.id === id)     
+    res.json(post);        ;                                
 }
 
 function store (req,res){
