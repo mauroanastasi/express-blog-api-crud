@@ -7,15 +7,12 @@ const posts = require(`../data/posts.js`)
 function index (req,res){
     
     const tag = req.query.tag;
-    
     let filteredTag = posts;
-    
     if(tag){
         filteredTag = posts.filter((post) => {
             return post.tags.includes(tag)
         })
-    }
-    
+    }   
     res.json(filteredTag);
 }
 
