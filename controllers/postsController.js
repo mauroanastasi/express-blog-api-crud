@@ -38,8 +38,8 @@ function show (req,res){
 }
 
 function store (req,res){
-    res.send('Creazione nuovi posts');
-}
+    console.log(req.body);
+} 
 
 function update (req,res){
     res.send('Modifica integrale dei posts ' + req.params.id);
@@ -71,8 +71,6 @@ function destroy (req,res){
     posts.splice(posts.indexOf(post),1);
     res.json(posts)
     // console.log(posts);
-    
-    // res.json(posts)
 
     // res.sendstatus(204)
 }

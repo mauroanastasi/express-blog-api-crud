@@ -12,6 +12,9 @@ app.get(`/`, (req,res) => {
     res.send(`hello world`)
 });
 
+// body parsing
+app.use(express.json())
+
 // importo file con rotte della cartella router
 const postsRouter = require(`./routers/rottePosts.js`);
 
