@@ -5,7 +5,18 @@ const posts = require(`../data/posts.js`)
 // definizione funzione index
 
 function index (req,res){
-    res.json(posts);
+    
+    const tag = req.query.tag;
+    
+    let filteredTag = posts;
+    
+    if(tag){
+        filteredTag = posts.filter((post) => {
+            return post.tags.includes(tag)
+        })
+    }
+    
+    res.json(filteredTag);
 }
 
 function show (req,res){
