@@ -7,11 +7,13 @@ const posts = require(`../data/posts.js`)
 function index (req,res){
     
     const tag = req.query.tag;
+    
     let filteredTag = posts;
+    
     if(tag){
         filteredTag = posts.filter((post) => {
             return post.tags.includes(tag)
-        })
+        })   
     }   
     res.json(filteredTag);
 }
@@ -21,7 +23,18 @@ function show (req,res){
     const id = parseInt(req.params.id)
     console.log(id)                   
     const post = posts.find (post => post.id === id)     
-    res.json(post);        ;                                
+    if(post === undefined){
+        
+        res.status(404);
+        
+        res.json({
+            error :`not found`, 
+            message :`post non trovato` 
+        })
+    }
+    else{
+        res.json(post);        
+    }                                
 }
 
 function store (req,res){
