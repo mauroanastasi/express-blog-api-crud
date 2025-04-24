@@ -42,6 +42,12 @@ const posts = [
     image: "/imgs/posts/torta_paesana.avif",
     tags: ["Dolci", "Dolci al cioccolato", "Torte", "Ricette vegetariane", "Ricette al forno"],
   },
+  // {
+  //   title: 'Dolce amaro',
+  //   content: "hai presente quando hai voglia di dolce ma non hai voglia di dolce? hai presente quando sai quello che vuoi ma non sai quello che vuoi? ecco puoi saperlo senza saperlo, Gusta l'indecisione.",
+  //   image: 'imgs/posts/dolce_amaro.jpeg',
+  //   tags: [ 'dolce', 'inaspettato', 'amaro', 'indecisione' ]
+  // }
 ];
 
 // esporto il file contenente l array di oggetti
