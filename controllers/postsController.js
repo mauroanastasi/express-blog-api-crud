@@ -50,7 +50,19 @@ function modify (req,res){
 }
 
 function destroy (req,res){
-    res.send('Eliminazione dei posts ma sei sicuro? ' + req.params.id);
+    
+    const id = parseInt(req.params.id);
+    
+    const post = posts.find(post => post.id === id);
+    
+    console.log(posts.indexOf(post))     
+    
+    posts.splice(posts.indexOf(post),1);
+    
+    console.log(posts);
+    
+    res.json(posts)
 }
+    
 
 module.exports = { index, show, store, update, modify, destroy };
