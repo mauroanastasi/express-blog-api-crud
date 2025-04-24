@@ -66,6 +66,7 @@ function destroy (req,res){
             error :`not found`, 
             message :`post non trovato` 
         })
+        return
     }
     posts.splice(posts.indexOf(post),1);
     res.json(posts)
