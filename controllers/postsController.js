@@ -57,11 +57,23 @@ function destroy (req,res){
     
     console.log(posts.indexOf(post))     
     
+    
+    if(!post){
+        
+        res.status(404);
+        
+        res.json({
+            error :`not found`, 
+            message :`post non trovato` 
+        })
+    }
     posts.splice(posts.indexOf(post),1);
-    
-    console.log(posts);
-    
     res.json(posts)
+    // console.log(posts);
+    
+    // res.json(posts)
+
+    // res.sendstatus(204)
 }
     
 
