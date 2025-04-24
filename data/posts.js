@@ -50,5 +50,6 @@ const posts = [
   // }
 ];
 
+
 // esporto il file contenente l array di oggetti
 module.exports = posts
