@@ -19,3 +19,6 @@ Bonus
 Implementare un filtro di ricerca nella index che mostri solo i post che hanno un determinato Tag
 In Show e Destroy, controllare se il parametro si riferisce ad un post esistente, in caso contrario, rispondere con uno stato 404 e un messaggio d’errore, sempre in formato JSON.
 Buon Lavoro e buon divertimento
+----------------------------------------------------------------
+Ho fatto un po di confusione con la mil2 e mil3 della seconda parte dell'esercizio, completando tutta la funzione store per poi tornare tornare indietro committando vari passaggi richiesti dalla traccia dell'esercizio. Per quanto riguarda la mil 3 invece ho semplicemente chiamato il suo commit come mil 2, nulla di grave.
+Tutto l'esercizio è stato completato inclusi i vari bonus richiesti.
