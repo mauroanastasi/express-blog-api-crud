@@ -61,7 +61,7 @@ function store (req,res){
 } 
 
 function update (req,res){
-    res.send('Modifica integrale dei posts ' + req.params.id);
+    console.log(req.body);
 }
 
 function modify (req,res){
