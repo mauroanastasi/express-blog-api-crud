@@ -61,7 +61,22 @@ function store (req,res){
 } 
 
 function update (req,res){
-    console.log(req.body);
+    const id = parseInt(req.params.id);
+    const post = posts.find(post => post.id === id);
+    if(!post){
+        res.status(404);
+        return res.json({
+            error :`not found`, 
+            message :`post non trovato` 
+        })
+    }
+    post.title = req.body.title;
+    post.content = req.body.content;
+    post.image = req.body.image;
+    post.tags = req.body.tags;
+    
+    console.log(posts);
+    res.json(post);
 }
 
 function modify (req,res){
