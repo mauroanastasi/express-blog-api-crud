@@ -4,4 +4,4 @@ function errorPrime (err,req,res,nextl){
         error:err.message
     })
 }
-module.export = errorPrime;
+module.exports = errorPrime;

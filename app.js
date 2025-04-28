@@ -7,10 +7,16 @@ const app = express();
 // definisco la porta
 const port = 3000;
 
+// importo error.mid
+const errorPrime = require(`./middleware/errorer.js`);
+
 // definisco la prima rotta
 app.get(`/`, (req,res) => {
     res.send(`hello world`)
 });
+
+// registro error Midd
+app.use(errorPrime);
 
 // body parsing
 app.use(express.json())
