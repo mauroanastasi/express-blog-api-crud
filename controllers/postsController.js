@@ -4,8 +4,8 @@ const posts = require(`../data/posts.js`)
 // LOGICA ROTTE
 // definizione funzione index
 
-function index (req,res){
-    
+function index (req,res,){
+    provafunzerr();
     const tag = req.query.tag;
     
     let filteredTag = posts;

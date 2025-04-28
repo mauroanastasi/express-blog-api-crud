@@ -16,7 +16,6 @@ app.get(`/`, (req,res) => {
 });
 
 // registro error Midd
-app.use(errorPrime);
 
 // body parsing
 app.use(express.json())
@@ -34,3 +33,4 @@ app.use(express.static(`public`));
 app.listen(port,() => {
     console.log(`Example app listening on port ${port}`)
 });
+app.use(errorPrime);
