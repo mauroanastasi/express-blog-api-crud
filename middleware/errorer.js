@@ -1,4 +1,4 @@
-function errorPrime (err,req,res,nextl){
+function errorPrime (req,res,next){
     res.status(500);
     res.json({
         error:`errore non trovato`
